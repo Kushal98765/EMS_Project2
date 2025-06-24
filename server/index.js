@@ -12,7 +12,10 @@ import attendenceRouter from './routes/attendence.js';
 
 connectToDatabase()
 const app = express()
-app.use(cors())
+app.use(cors({
+    origin: 'https://ems-project2-ui.onrender.com/',
+    credentials: true
+}))
 app.use(express.json())
 app.use(express.static('public/uploads'))
 app.use('/api/auth', authRouter)
