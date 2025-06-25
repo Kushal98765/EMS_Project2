@@ -28,12 +28,6 @@ app.use('/api/attendence', attendenceRouter);
 app.use('/api/dashboard', dashboardRouter);
 
 
-app.get("/", (req, res) => {
-  res.send("EMS Backend is running...");
-});
-
-
-
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
