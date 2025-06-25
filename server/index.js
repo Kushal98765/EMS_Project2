@@ -1,19 +1,19 @@
 import cors from 'cors';
 import express from "express";
 import connectToDatabase from './db/db.js';
+import attendenceRouter from './routes/attendence.js';
 import authRouter from './routes/auth.js';
+import dashboardRouter from './routes/dashboard.js';
 import departmentRouter from './routes/department.js';
 import employeeRouter from './routes/employee.js';
 import leaveRouter from './routes/leave.js';
 import salaryRouter from './routes/salary.js';
 import settingRouter from './routes/setting.js';
-import dashboardRouter from './routes/dashboard.js';
-import attendenceRouter from './routes/attendence.js';
 
 connectToDatabase()
 const app = express()
 app.use(cors({
-    origin: 'https://ems-project2-ui.onrender.com/',
+    origin: 'https://ems-project2-ui.onrender.com',
     credentials: true
 }))
 app.use(express.json())
